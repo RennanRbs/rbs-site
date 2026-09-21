@@ -50,12 +50,12 @@ Aplicativos web e produtos digitais do zero ou em evolução: MVP, interface, ba
   - Telefone é opcional — email e mensagem bastam
   - Sem spam: usamos seus dados só para responder este pedido
 
-## Footer (soft, sem hard sell)
+## Footer (produto, sem company face)
 
 - **Marca:** RBS Tech — tech sob demanda para empresas.
-- **One-liner de produtos:** Também desenvolvemos apps próprios de produto — por exemplo, um separador de stems — em paralelo aos serviços B2B.
-- **Sem** waitlist, preço, captura de email de produto, ou páginas de livros / jogos / amigo secreto.
-
+- **Link de produto:** [Scrumble — jogo de palavras](https://scrumbledada.github.io/apps/scrumble/)
+- **Sem** stems, waitlist, preço, captura de email de produto, ou páginas de livros / amigo secreto.
+- Após merge do rewrite de `scrumbledada.github.io`, o link pode apontar para a home `https://scrumbledada.github.io/`.
 
 ## Marca / design
 
@@ -68,5 +68,6 @@ Aplicativos web e produtos digitais do zero ou em evolução: MVP, interface, ba
 
 - Foco: landing + CTA B2B de serviços sob demanda.
 - **Não** criar páginas ou seções de: rede social de livros, jogos, amigo secreto.
-- **Não** adicionar waitlist/preço/captura do Stems — não há oferta comercial clara.
+- **Não** mencionar stems no footer ou no site — produto próprio no footer é só Scrumble.
+- **Não** adicionar waitlist/preço/captura de produto.
 - Sem métricas, depoimentos ou logos inventados.
