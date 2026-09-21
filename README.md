@@ -1,25 +1,20 @@
 # RBS Tech — site institucional
 
 Landing B2B em português (pt-BR) para serviços de tech sob demanda.
-Stack: HTML + CSS + JS estático, servido por nginx via Docker no Railway.
+Stack: HTML + CSS + JS estático, servido por um `server.py` mínimo (Python) no Railway.
 
 ## Rodar localmente
 
-Opção A — abrir direto no navegador:
-
 ```bash
 cd /workspace/rbs-site
-# abra index.html, ou use um servidor estático:
-python3 -m http.server 8080
-# http://localhost:8080
+python3 server.py
+# http://localhost:8080  (ou PORT=3000 python3 server.py)
 ```
 
-Opção B — Docker (igual à produção):
+Alternativa sem o script:
 
 ```bash
-docker build -t rbs-site .
-docker run --rm -p 8080:80 rbs-site
-# http://localhost:8080
+python3 -m http.server 8080
 ```
 
 ## Contato (V1)
@@ -27,7 +22,7 @@ docker run --rm -p 8080:80 rbs-site
 O formulário usa **mailto** + botão “Copiar texto do email”.
 
 - Email padrão: `contato@rbs.tech`
-- Para alterar: edite a constante `CONTACT_EMAIL` em `main.js` e faça novo deploy.
+- Para alterar: edite a constante `CONTACT_EMAIL` em `main.js` e faça novo deploy (push em `main`).
 
 Não há secrets no repositório.
 
@@ -48,16 +43,21 @@ Não há secrets no repositório.
 
 ## Deploy (Railway)
 
-Projeto Railway: **rbs-site** (separado de `stems-mvp`).
+- Projeto Railway: **rbs-site** (ID `fe9c4f64-9f9e-47b4-ae4b-c82624177cac`) — **não** usa `stems-mvp`.
+- Serviço: **rbs-site**, ambiente **production**.
+- Código: GitHub `RennanRbs/rbs-site` (branch `main`), build via Dockerfile.
+- Domínio público: https://rbs-site-production.up.railway.app
+- Healthcheck: `GET /health` → `ok`
+
+CLI (opcional, se autenticado):
 
 ```bash
 cd /workspace/rbs-site
-railway link   # se necessário: projeto rbs-site
+railway link   # projeto rbs-site
 railway up -y
-railway domain # gera domínio *.up.railway.app
 ```
 
-Build: Dockerfile (`nginx:alpine`) + `railway.toml` com healthcheck em `/health`.
+Neste ambiente o deploy foi feito via GitHub + Railway (MCP/auto-deploy), porque o Railway CLI local não estava logado.
 
 ## Estrutura
 
@@ -66,11 +66,11 @@ rbs-site/
   index.html      # página única
   styles.css
   main.js         # CONTACT_EMAIL + form
+  server.py       # static + /health
   favicon.svg
   robots.txt
-  nginx.conf
+  health          # arquivo estático auxiliar
   Dockerfile
-  railway.toml
   CONTENT.md      # cópia para review de marketing
   README.md
 ```
