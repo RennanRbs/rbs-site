@@ -41,6 +41,7 @@ Aplicativos web e produtos digitais do zero ou em evolução: MVP, interface, ba
 
 ## Contato
 
+- **Email de proposta (mailto / CONTACT_EMAIL):** `rennan@icloud.com`
 - **Título:** Pedir proposta
 - **Intro:** Conte o essencial do desafio. Respondemos com próximos passos e, quando fizer sentido, uma proposta objetiva.
 - **Campos:** nome*, empresa*, email*, telefone (opcional), mensagem*
@@ -54,6 +55,14 @@ Aplicativos web e produtos digitais do zero ou em evolução: MVP, interface, ba
 - **Marca:** RBS Tech — tech sob demanda para empresas.
 - **One-liner de produtos:** Também desenvolvemos apps próprios de produto — por exemplo, um separador de stems — em paralelo aos serviços B2B.
 - **Sem** waitlist, preço, captura de email de produto, ou páginas de livros / jogos / amigo secreto.
+
+
+## Marca / design
+
+- Fundo da página: branco (`#ffffff`)
+- Texto: escuro de alto contraste (`#0f172a`)
+- Marca tipográfica: **RBS** em preto (`#000000`) + ponto **.** em azul-marinho (`#0A2A6B`)
+- Acento UI: same navy `#0A2A6B` / hover `#0B1F4A`
 
 ## Limites editoriais (briefing do diretor)
 

@@ -2,7 +2,7 @@
  * RBS Tech — contact form (V1 mailto + copy)
  * Change CONTACT_EMAIL below to update the destination inbox.
  */
-const CONTACT_EMAIL = "contato@rbs.tech";
+const CONTACT_EMAIL = "rennan@icloud.com";
 
 (function () {
   const yearEl = document.getElementById("year");

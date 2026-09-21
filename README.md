@@ -21,7 +21,7 @@ python3 -m http.server 8080
 
 O formulário usa **mailto** + botão “Copiar texto do email”.
 
-- Email padrão: `contato@rbs.tech`
+- Email padrão: `rennan@icloud.com`
 - Para alterar: edite a constante `CONTACT_EMAIL` em `main.js` e faça novo deploy (push em `main`).
 
 Não há secrets no repositório.
